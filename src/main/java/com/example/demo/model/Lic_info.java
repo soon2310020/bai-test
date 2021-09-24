@@ -7,7 +7,6 @@ import java.util.Date;
 
 @Entity
 @Table(name = "lic_info")
-@SecondaryTable(name = "lic_info_network_type")
 public class Lic_info {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
