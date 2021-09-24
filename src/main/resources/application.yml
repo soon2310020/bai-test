@@ -1,0 +1,20 @@
+Spring:
+
+ security:
+  oauth2:
+    client:
+      registration:
+        qltp:
+          client-name: oidc
+          client-id: login
+          client-secret: a80bee3c-62b3-42f2-9d20-25abe9767c1f
+          authorization-grant-type: authorization_code
+          redirect-uri: http://localhost:8080/login/oauth2/code/login
+          scope: openid,address,email,microprofile-jwt,profile,roles
+      provider:
+        qltp:
+          authorization-uri: https://services.adfilex.vn/auth/realms/TEST/protocol/openid-connect/auth
+          token-uri: https://services.adfilex.vn/auth/realms/TEST /protocol/openid-connect/token
+          user-info-uri: https://services.adfilex.vn/auth/realms/TEST/protocol/openid-connect/userinfo
+          jwk-set-uri: https://services.adfilex.vn/auth/realms/TEST/protocol/openid-connect/certs
+          user-name-attribute: preferred_username
